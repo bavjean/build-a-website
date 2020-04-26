@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,700,900&display=swap');
 
 body {
 	background-color: rgb(154,77,159);
 	font-family: 'Montserrat', sans-serif;
 	height: 1500px;
-	width: 1660px;
+	width: 1600px;
 	display: grid;
 	grid-template-areas:
 			"header header header"
@@ -12,12 +12,12 @@ body {
 			"main    main    main"
 			"footer footer footer";
 	grid-template-rows: 65px 1fr 2fr 65px;
-	grid-template-columns: 1fr 1fr 2fr;
+	grid-template-columns: 1fr 1fr 800px;
 	margin: 0 auto;
 }
 
 header {
-	z-index: 3;
+	z-index: 5;
 	grid-area: header;
 	display: flex;
 	justify-content: space-between;
@@ -35,19 +35,42 @@ header div {
 
 header p {
 	padding-left: 50px;
-}
-
-header img {
-	height: 50px;
+	font-size: 1.25rem;
+	font-weight: bold;
+	margin: 0;
 }
 
 section {
 	grid-area: section;
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	padding: 50px;
+	align-items: stretch;
 	font-size: 1.5rem;
+	flex-wrap: wrap;
+}
+section div {
+	width: 550px;
+}
+
+section img {
+	padding-top: 30px;
+}
+
+section h1 {
+	font-weight: 700;
+	padding-top: 20px;
+	margin-bottom: 50px;
+}
+
+section p {
+	font-weight: 400;
+	margin-top: 15px;
+	margin-bottom: 25px;
+	padding; 10px;
+}
+
+section p.white {
+	font-weight: 200;
 }
 
 main {
@@ -69,7 +92,8 @@ footer {
 	align-items: center;
 	padding-left: 50px;
 	font-size: .75rem;
-	margin-top: 0;
+	margin-top: -5px;
+	flex-wrap: wrap;
 }
 
 footer div {
@@ -126,10 +150,13 @@ nav {
 }
 
 .getTicketsNow {
-	font-weight: bold;
+	display: inline-block;
+	font-size: 1rem;
+	font-weight: 700;
 	background: rgb(8,9,37);
 	border-radius: 50px;
-	padding: 7px 35px;
+	padding: 10px 30px;
+	margin: 30px;
 }
 
 .smallLocate {
@@ -147,4 +174,92 @@ nav {
 	height: 500px;
 	width: 1660px;
 	margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		width: 750px;
+		height: 650px;
+		grid-template-areas:
+			"header"
+			"section1"
+			"section"
+			"main"
+			"footer";
+		grid-template-rows: 65px 1fr 1fr 1fr 65px;
+		grid-template-columns: 750px;
+	}
+	section div {
+		width: 680px;
+	}
+	.map {
+		max-width: 750px;
+		height: 200px;
+	}
+	div.section1 img {
+		width: 750px;
+		margin: 0;
+	}
+	footer {
+		max-width: 750px;
+	}
+	footer div {
+		width: 80px;
+		padding-right: 25px;
+	}
+
+	header div {
+		width: 25%;
+	}
+	.getTicket {
+		font-size: 0.75rem;
+		padding-left: 20px;
+		align-self: center;
+	}
+	nav {
+		width: 75%;
+		font-size: .5rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	nav {
+		display: none;
+	}
+	body {
+		width: 580px;
+		height: 500px;
+		grid-template-areas:
+			"header"
+			"section1"
+			"section"
+			"main"
+			"footer";
+		grid-template-rows: 65px 1fr 1fr 1fr 65px;
+		grid-template-columns: 580px;
+	}
+	section div {
+		width: 480px;
+	}
+	.map {
+		width: 580px;
+		height: 200px;
+	}
+	div.section1 img {
+		width: 580px;
+	}
+	footer {
+		max-width: 580px;
+	}
+	footer div {
+		width: 50px;
+		padding-right: 25px;
+	}
+	header div {
+		width: 100%;
+		justify-content: center;
+	}
+	span.hide {
+		display: none;
+	}
 }
