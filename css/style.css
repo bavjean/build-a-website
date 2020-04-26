@@ -4,7 +4,7 @@ body {
 	background-color: rgb(154,77,159);
 	font-family: 'Montserrat', sans-serif;
 	height: 1500px;
-	width: 1600px;
+	width: 1658px;
 	display: grid;
 	grid-template-areas:
 			"header header header"
@@ -93,7 +93,6 @@ footer {
 	padding-left: 50px;
 	font-size: .75rem;
 	margin-top: -5px;
-	flex-wrap: wrap;
 }
 
 footer div {
@@ -172,7 +171,7 @@ nav {
 .map {
 	z-index: 1;
 	height: 500px;
-	width: 1660px;
+	width: 1658px;
 	margin: 0;
 }
 
@@ -222,13 +221,13 @@ nav {
 	}
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
 	nav {
 		display: none;
 	}
 	body {
-		width: 580px;
-		height: 500px;
+		width: 375px;
+		height: 300px;
 		grid-template-areas:
 			"header"
 			"section1"
@@ -236,20 +235,25 @@ nav {
 			"main"
 			"footer";
 		grid-template-rows: 65px 1fr 1fr 1fr 65px;
-		grid-template-columns: 580px;
+		grid-template-columns: 375px;
 	}
 	section div {
 		width: 480px;
 	}
 	.map {
-		width: 580px;
-		height: 200px;
+		width: 375px;
+		height: 150px;
 	}
 	div.section1 img {
-		width: 580px;
+		width: 375px;
 	}
 	footer {
-		max-width: 580px;
+		max-width: 375px;
+		padding-left: 15px;
+
+	}
+	footer p {
+		font-size: .15rem;
 	}
 	footer div {
 		width: 50px;
