@@ -6,6 +6,9 @@ For this project my goal was to take a mock up of a website, and try to clone is
 
 1. Fork and clone the repository
 2. Navigate to html and css files
+3. View in browser or look at the live version on Github pages 
+	
+	[My first website]: https://bavjean.github.io/build-a-website/
 
 ### Prerequisites
 
